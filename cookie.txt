@@ -1,0 +1,5 @@
+# Cookies for domains related to grcourt.org.
+# This content may be pasted into a cookies.txt file and used by wget
+# Example:  wget -x --load-cookies cookies.txt http://grcourt.org/CourtPayments/loadCase.do?caseSequence=153256
+#
+grcourt.org	FALSE	/	FALSE	0	JSESSIONID	aaa1sKrRjU2bs7NGIotFu

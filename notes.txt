@@ -1,0 +1,18 @@
+Straglers:
+
+ls -l Straglers/ | wc -l
+84388
+
+ls -l DataMob/ | wc -l
+550961
+
+First run of:
+find DataMob/ -size 0 -print >> size_0.txt
+
+Indicates all 0 files are either civil or unable to load...
+
+What about missing numbers than?
+
+
+Random picking of "gaps" in the count show:
+Civil or Unable to load
