@@ -24,16 +24,15 @@ opener.addheaders.append(('Cookie', headers))
 
 count = 1
 
-
-
 localtime = time.localtime(time.time())
 with open('straglers2.txt') as unpicked:
 	for line in unpicked:
 		count = int(line)
-		while true:
+		while True:
 			print 'On Case #:', count
 			#Request Page
 			f = opener.open('http://grcourt.org/CourtPayments/loadCase.do?caseSequence=' + str(count))
+			print int(line)
 			try: 
 				bsoup = BeautifulSoup(f.read())
 				#global problems
@@ -80,5 +79,5 @@ with open('straglers2.txt') as unpicked:
 		#count_incompletes.close()
 		#print "Start time:", localtime
 		#
-		print "End time:", localtime_end
+		#print "End time:", localtime_end
 

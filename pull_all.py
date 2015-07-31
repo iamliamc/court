@@ -9,8 +9,8 @@ os.system("del criminal_out.csv")
 
 #Our source
 gr_url = 'http://grcourt.org/CourtPayments/loadCase.do?caseSequence=1'
-nmax = 891429
-nmax2 = 100000
+nmax = 925100
+nmax2 = 25000
 
 #Get Cookie
 r = requests.get('http://grcourt.org/CourtPayments/loadCase.do?caseSequence=1')
@@ -22,7 +22,7 @@ opener = urllib2.build_opener()
 opener.addheaders.append(('Cookie', headers))
 count_incompletes= open('workfile.txt', 'w')
 
-count = 75266
+count = 1
 
 localtime = time.localtime(time.time())
 
