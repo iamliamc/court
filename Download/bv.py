@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 from __future__ import division
-import csv, os, re, urllib2, urllib, requests, cookielib, mechanize, robotparser, time, random, string, sys, sqlite3, time
+import csv, os, re, urllib2, urllib, requests, cookielib, mechanize, robotparser, time, random, string, sys, sqlite3, time, signal
 from bs4 import BeautifulSoup
 
 #Our source
@@ -53,6 +53,8 @@ while my_count < nmax:
 		criminal_out.close()
 		my_count += 1
 		time.sleep(1.8)
+		out_count.seek(0)
+		out_count.write(str(my_count))
 	except:
 		print "################ EXCEPTION #######################"
 		time.sleep(10)
