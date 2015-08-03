@@ -21,10 +21,7 @@ HAVING COUNT(Offense) > 1
 ORDER BY COUNT(Offense) ASC
 
 
-Crashed:
-
-SELECT * FROM defendant as C JOIN charge
-
+Worked: 
 Select * from defendant as C JOIN case_info
 AS R on C.defendant_id=R.defendant_id
 JOIN charge
