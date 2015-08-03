@@ -1,0 +1,31 @@
+select DISTINCT Name_Full from defendant where Sex = "M" AND Race = "Black" AND Mailing_Address LIKE '%49504%' AND Weight = '200'
+
+select count (DISTINCT Name_Full) from defendant
+
+select Case_Number from charge where Offense LIKE "%marijuana%" 
+
+## Show most frequent defendant full name
+Select Name_Full,
+					COUNT(Name_Full) as Name_Full
+FROM defendant
+GROUP BY Name_Full
+HAVING COUNT(Name_Full) > 1
+ORDER BY COUNT(Name_Full) DESC
+
+## Show most frequent charge
+Select Offense, charges_id
+					COUNT(Offense) as Offense
+FROM charge
+GROUP BY Offense
+HAVING COUNT(Offense) > 1
+ORDER BY COUNT(Offense) ASC
+
+
+Crashed:
+
+SELECT * FROM defendant as C JOIN charge
+
+Select * from defendant as C JOIN case_info
+AS R on C.defendant_id=R.defendant_id
+JOIN charge
+AS X on R.Case_Number=X.Case_Number
