@@ -26,3 +26,5 @@ Select * from defendant as C JOIN case_info
 AS R on C.defendant_id=R.defendant_id
 JOIN charge
 AS X on R.Case_Number=X.Case_Number
+
+select ci.*, c.*, d.* from case_info ci join charge c on ci.case_number = c.case_number join defendant d on d.defendant_id = ci.defendant_id
